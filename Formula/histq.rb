@@ -1,25 +1,25 @@
 class Histq < Formula
   desc "Project-aware shell history for zsh: an up-arrow that knows your repo"
   homepage "https://github.com/sattamBytes/histq"
-  version "0.2.0"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.2.0/histq-aarch64-apple-darwin.tar.xz"
-      sha256 "24b1e867b91e5b30c3c130c35b7e6eeece1ea4a68a7405f009f9b335260e15ed"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.2.1/histq-aarch64-apple-darwin.tar.xz"
+      sha256 "e2e94306fc552ef230ad042cc4c88ef7701325c45d0298c4782a9d85379ef2f3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.2.0/histq-x86_64-apple-darwin.tar.xz"
-      sha256 "462adb18a9094055d68a1846fbec041322ae48ebda78b51c2a47e08fa7e3892f"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.2.1/histq-x86_64-apple-darwin.tar.xz"
+      sha256 "158da9c3ce7f2fddd79ff9c3f164fabb2ba71b1ee119925f098fea53fd77a35c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.2.0/histq-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "62c8ce8323a1224c84bebb8ed89f1380fafd6ba5a6aa4ee74de1442a6662afb6"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.2.1/histq-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8c46482bcce8111b04f2ea5d590e5e846cb407d8b47dbd0f40074ccdb78b4eb9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.2.0/histq-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "23ea242ea6eee20730fd4f7c83729d0bfa9dd941e09d5f3371ddeb5219a78349"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.2.1/histq-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6dcd27efa808a7fb2e13e9ac4f4e1743b03dc1a9f0fac1bb423f5db4aaee9d69"
     end
   end
   license "MIT"
