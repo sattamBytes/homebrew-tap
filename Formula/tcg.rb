@@ -15,7 +15,7 @@ class Tcg < Formula
   end
 
   test do
-    assert_match "static analysis", shell_output("#{bin}/tcg --help")
+    assert_match "Available Commands", shell_output("#{bin}/tcg --help")
 
     # Analyze a trivial module end-to-end and confirm a JSON graph is emitted.
     (testpath/"go.mod").write "module example.test\n\ngo 1.23\n"
