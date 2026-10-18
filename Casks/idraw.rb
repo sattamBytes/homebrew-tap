@@ -12,14 +12,15 @@ cask "idraw" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on :macos
 
   app "idraw.app"
 
   # Not notarized yet: clear the download quarantine so macOS opens it without a warning.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/idraw.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/idraw.app"],
+        must_succeed: false
   end
 
   zap trash: "~/Library/Application Support/idraw"
