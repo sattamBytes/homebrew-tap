@@ -1,6 +1,6 @@
 cask "idraw" do
-  version "0.2.0"
-  sha256 "f536e53bc5b5fd707331602e06295d591d3349c683cb393d92cf735a7554addb"
+  version "0.3.0"
+  sha256 "e1b93b7d5c85baba3314b34ab981c1eab0c1ddc8b5e1377fbf71c4a289930786"
 
   url "https://github.com/sattamBytes/idraw/releases/download/v#{version}/idraw-v#{version}-macos-universal.zip"
   name "idraw"
@@ -15,6 +15,8 @@ cask "idraw" do
   depends_on :macos
 
   app "idraw.app"
+  # command line: idraw render / check / icons / skill install
+  binary "#{appdir}/idraw.app/Contents/MacOS/idraw"
 
   # Not notarized yet: clear the download quarantine so macOS opens it without a warning.
   postflight_steps do
