@@ -6,5 +6,6 @@ Homebrew tap for sattamBytes tools (histq, ...)
 [idraw](https://github.com/sattamBytes/idraw), a system-design diagramming app for macOS:
 
 ```bash
-brew install --cask sattamBytes/tap/idraw
+brew tap sattamBytes/tap
+brew install --cask idraw
 ```
