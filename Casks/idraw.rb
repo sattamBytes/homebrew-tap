@@ -1,6 +1,6 @@
 cask "idraw" do
-  version "0.4.1"
-  sha256 "ecd0c5f7b84784f8d3877d15bebe40695e558fcf6109af240ac299b4ed6c2da5"
+  version "0.4.2"
+  sha256 "e7f794e93d7e60db17b46fd908fadeff0f4abe6165ab20bbe9848bce74478b46"
 
   url "https://github.com/sattamBytes/idraw/releases/download/v#{version}/idraw-v#{version}-macos-universal.zip"
   name "idraw"
