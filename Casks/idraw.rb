@@ -1,10 +1,10 @@
 cask "idraw" do
-  version "0.3.1"
-  sha256 "8983d7cedc58573681b2cbb50cd0c2bfbffa265c48bfab1366b0d14948e81bd2"
+  version "0.4.0"
+  sha256 "e808bd005fb307276c1c9c8971889615b07cbf7cb36a9b38c7e879b94543a435"
 
   url "https://github.com/sattamBytes/idraw/releases/download/v#{version}/idraw-v#{version}-macos-universal.zip"
   name "idraw"
-  desc "Diagramming app for system design with animated request flows"
+  desc "AI-first diagramming app for system design with animated flows"
   homepage "https://github.com/sattamBytes/idraw"
 
   livecheck do
