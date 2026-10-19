@@ -1,25 +1,25 @@
 class Histq < Formula
   desc "Project-aware shell history for zsh: an up-arrow that knows your repo"
   homepage "https://github.com/sattamBytes/histq"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.3.0/histq-aarch64-apple-darwin.tar.xz"
-      sha256 "421df85880dd869abb109e8d6d741f8a4bea6c434fc21ed9942220e171783780"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.4.0/histq-aarch64-apple-darwin.tar.xz"
+      sha256 "a372916d59f77ed084a83aabfeb10edaa539725db32dedcb900c43e2e3ef1f97"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.3.0/histq-x86_64-apple-darwin.tar.xz"
-      sha256 "64da2cec4ed5ff5b5398f1bb83b9d51793fe25acc8370d4cb70b4c6b82caf588"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.4.0/histq-x86_64-apple-darwin.tar.xz"
+      sha256 "4c176a441c7b45969d32c26d082db8e1a6fa9a269434f44bfc28abc282176047"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.3.0/histq-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8053e590aaaa7ae167f1d25aadb1d8eee1c8cc33fe10d35bde43d72a4a84a1ba"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.4.0/histq-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d8f9fc485537e0e2dbefb4d423e3b8148d5ace85e59ec568477092e53ef95ba1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sattamBytes/histq/releases/download/v0.3.0/histq-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4e2e50fa34a49b5ad71db481a1356854f20e73c87610c42916285a9bdef532f5"
+      url "https://github.com/sattamBytes/histq/releases/download/v0.4.0/histq-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "54bdd12966784e392aa65e0ae5f8242bea46c528251cba0d688d832699a712f4"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Histq < Formula
   end
 
   def install
-    bin.install "histq" if OS.mac? && Hardware::CPU.arm?
-    bin.install "histq" if OS.mac? && Hardware::CPU.intel?
-    bin.install "histq" if OS.linux? && Hardware::CPU.arm?
-    bin.install "histq" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "histq"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "histq"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "histq"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "histq"
+    end
 
     install_binary_aliases!
 
